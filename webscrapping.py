@@ -40,18 +40,18 @@ print(text)
 
 data=text[text.index('⭐ Our certification  programs ')+2:text.index('Companies where  Our students got placed ')-1]
 vb=[i.strip() for i in data if i!='']
-munvar=[i for i in vb if i!='']
-print(munvar)
+venkatesh=[i for i in vb if i!='']
+print(venkatesh)
 
 duration=[]
 course=[]
 description=[]
 location=[]
-for i in range(0,len(munvar),4):
-    duration.append(munvar[i])
-    course.append(munvar[i+1])
-    description.append(munvar[i+2])
-    location.append(munvar[i+3])
+for i in range(0,len(venkatesh),4):
+    duration.append(venkatesh[i])
+    course.append(venkatesh[i+1])
+    description.append(venkatesh[i+2])
+    location.append(venkatesh[i+3])
 
 df=pd.DataFrame({'Duration':duration,'Course':course,'Description':description,'Location':location})
 
